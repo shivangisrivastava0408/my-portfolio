@@ -26,16 +26,6 @@ body {
   letter-spacing: 0.2px;
 }
 
-#achievements ul {
-  list-style: none;
-  color: #3b8052;
-  font-size: 20px;
-}
-#achievements ul li::before {
-  content: "🎗";
-  margin-right: 0.2rem;
-}
-
 #skills ul {
   list-style: none;
 }
@@ -614,4 +604,12 @@ b, strong {
     vertical-align: top;
   }
 }
+
+.navbar-brand img {
+  border-radius: 50%;
+  width: 110px;
+  height: 150px;
+}
+
+
 
