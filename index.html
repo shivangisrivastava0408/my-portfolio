@@ -3,31 +3,254 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="Portfolio of Shivangi Srivastava - Software Engineer, nerd, and tech enthusiast. Showcasing skills, experience, and projects in a modern, classy, and nerdy theme.">
+    <meta name="author" content="Shivangi Srivastava">
 
     <title>Shivangi Srivastava</title>
-    <link rel = "icon" href = "images/undraw/girl_code_1.png"
-        type = "image/x-icon">
+    <link rel="icon" href="images/undraw/girl_code_1.png" type="image/x-icon">
 
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/unicons.css">
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
-
-    <!-- MAIN STYLE -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Mono:400,700|Montserrat:400,700&display=swap">
     <link rel="stylesheet" href="css/tooplate-style.css">
-    
-<!--
-
--->
+    <style>
+      body {
+        font-family: 'Fira Mono', 'Montserrat', Arial, sans-serif;
+        background: linear-gradient(135deg, #232526 0%, #414345 100%);
+        color: #e0e0e0;
+        min-height: 100vh;
+      }
+      .navbar {
+        background: #232526;
+        box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+      }
+      .navbar-brand img {
+        width: 48px;
+        border-radius: 50%;
+        margin-right: 8px;
+        border: 2px solid #00e6e6;
+        box-shadow: 0 2px 8px rgba(0,255,255,0.08);
+      }
+      .navbar-nav .nav-link {
+        font-family: 'Fira Mono', monospace;
+        font-weight: 500;
+        font-size: 1.1rem;
+        margin: 0 10px;
+        color: #00e6e6 !important;
+        letter-spacing: 1px;
+        transition: color 0.2s;
+      }
+      .navbar-nav .nav-link:hover {
+        color: #fff !important;
+        text-shadow: 0 0 8px #00e6e6;
+      }
+      .about {
+        background: rgba(44, 62, 80, 0.85);
+        border-radius: 24px;
+        box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+        margin-top: 32px;
+        padding: 32px 0;
+      }
+      .about-image img {
+        border-radius: 16px;
+        box-shadow: 0 4px 24px #00e6e633;
+        background: #232526;
+        padding: 12px;
+      }
+      .about-text h1 {
+        font-size: 2.7rem;
+        font-weight: 700;
+        color: #00e6e6;
+        font-family: 'Fira Mono', monospace;
+        text-shadow: 0 0 12px #00e6e644;
+      }
+      .about-text p {
+        font-size: 1.15rem;
+        color: #e0e0e0;
+        font-family: 'Montserrat', Arial, sans-serif;
+      }
+      .custom-btn {
+        background: #00e6e6;
+        color: #232526;
+        border-radius: 25px;
+        padding: 10px 24px;
+        font-weight: 600;
+        font-family: 'Fira Mono', monospace;
+        box-shadow: 0 2px 8px #00e6e633;
+        transition: background 0.2s, color 0.2s;
+      }
+      .custom-btn:hover {
+        background: #232526;
+        color: #00e6e6;
+        border: 1px solid #00e6e6;
+      }
+      .resume, .skills, .contact {
+        background: rgba(44, 62, 80, 0.85);
+        border-radius: 24px;
+        box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+        margin-top: 32px;
+        padding: 32px 0;
+      }
+      .timeline-yr span {
+        background: #00e6e6;
+        color: #232526;
+        font-family: 'Fira Mono', monospace;
+        font-weight: bold;
+        border-radius: 8px;
+        padding: 4px 12px;
+        box-shadow: 0 2px 8px #00e6e633;
+      }
+      .timeline-info h3 span {
+        color: #00e6e6;
+        font-family: 'Fira Mono', monospace;
+      }
+      .skills h2 {
+        color: #00e6e6;
+        font-family: 'Fira Mono', monospace;
+        font-size: 2rem;
+        margin-bottom: 24px;
+      }
+      .skills ul {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .skills li {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 32px;
+      }
+      .skills img {
+        width: 90px !important;
+        height: 90px !important;
+        object-fit: contain !important;
+        margin: 0 !important;
+        box-shadow: 0 2px 8px #00e6e633;
+        border-radius: 12px;
+        background: #232526;
+        padding: 8px;
+        display: block;
+      }
+      @keyframes skillPulse {
+        0% { filter: brightness(1); transform: scale(1); }
+        50% { filter: brightness(1.15); transform: scale(1.06); }
+        100% { filter: brightness(1); transform: scale(1); }
+      }
+      @keyframes skillBounce {
+        0% { transform: scale(1.12) rotate(-2deg); }
+        30% { transform: scale(1.22) rotate(2deg); }
+        60% { transform: scale(0.98) rotate(-2deg); }
+        100% { transform: scale(1.12) rotate(-2deg); }
+      }
+      .contact-form input, .contact-form textarea {
+        border-radius: 8px;
+        border: 1px solid #00e6e6;
+        margin-bottom: 12px;
+        background: #232526;
+        color: #e0e0e0;
+        font-family: 'Fira Mono', monospace;
+      }
+      .contact-form .submit-btn {
+        background: #00e6e6;
+        color: #232526;
+        font-weight: 600;
+        border-radius: 25px;
+        transition: background 0.2s;
+        font-family: 'Fira Mono', monospace;
+      }
+      .contact-form .submit-btn:hover {
+        background: #232526;
+        color: #00e6e6;
+        border: 1px solid #00e6e6;
+      }
+      .contact .social-links {
+        display: flex;
+        gap: 24px;
+        margin-top: 24px;
+        justify-content: flex-start;
+      }
+      .contact .social-links img {
+        width: 48px;
+        transition: transform 0.2s;
+        border-radius: 8px;
+        background: #232526;
+        box-shadow: 0 2px 8px #00e6e633;
+      }
+      .contact .social-links img:hover {
+        transform: scale(1.1);
+        box-shadow: 0 0 16px #00e6e699;
+      }
+      /* Nerdy code block style for project section */
+      .project-info {
+        background: #232526;
+        border-radius: 12px;
+        box-shadow: 0 2px 12px #00e6e622;
+        padding: 16px;
+        margin-bottom: 16px;
+        font-family: 'Fira Mono', monospace;
+        color: #00e6e6;
+      }
+      .project-info img {
+        border-radius: 8px;
+        box-shadow: 0 2px 8px #00e6e633;
+      }
+      /* Scrollbar styling for nerdy effect */
+      ::-webkit-scrollbar {
+        width: 8px;
+        background: #232526;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #00e6e6;
+        border-radius: 8px;
+      }
+      /* Selection styling */
+      ::selection {
+        background: #00e6e6;
+        color: #232526;
+      }
+      /* Intro animation styles */
+      .animated-intro .intro-line {
+        opacity: 0;
+        transform: translateY(-30px);
+        animation: fadeInUp 0.8s 0.2s forwards;
+      }
+      .animated-intro .intro-name {
+        opacity: 0;
+        transform: scale(0.8);
+        animation: fadeInScale 0.8s 0.8s forwards;
+      }
+      .animated-intro .intro-role {
+        opacity: 0;
+        transform: translateY(30px);
+        animation: fadeInUp 0.8s 1.4s forwards;
+      }
+      @keyframes fadeInUp {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      @keyframes fadeInScale {
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+    </style>
   </head>
   <body>
     
     <!-- MENU -->
     <nav class="navbar navbar-expand-sm navbar-light">
         <div class="container">
-            <a class="navbar-brand" href="index.html"><img src="images/undraw/Headshot.png"></a>
+            <a class="navbar-brand d-flex align-items-center" href="index.html" style="gap: 16px;">
+              <span style="font-family:'Fira Mono', monospace; font-size:1.5rem; color:#00e6e6; font-weight:700; text-shadow:0 0 8px #00e6e644; letter-spacing:2px;">Shivangi Srivastava</span>
+            </a>
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -59,12 +282,7 @@
                 </ul>
 
                 <ul class="navbar-nav ml-lg-auto">
-                    <div class="ml-lg-4">
-                      <div class="color-mode d-lg-flex justify-content-center align-items-center">
-                        <i class="color-mode-icon"></i>
-                        Color mode
-                      </div>
-                    </div>
+                    <!-- Color mode removed -->
                 </ul>
             </div>
         </div>
@@ -72,36 +290,29 @@
 
     <!-- ABOUT -->
     <section class="about full-screen d-lg-flex justify-content-center align-items-center" id="about">
-        <div class="container">
-            <div class="row">
-
-              <div class="col-lg-5 col-md-12 col-12">
-                <div class="about-image svg">
-                    <img src="images/undraw/gahag-computer_user.svg" class="img-fluid" alt="svg image">
-                </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-5 col-md-12 col-12 d-flex align-items-center justify-content-center" style="margin-bottom: 40px;">
+            <div class="about-image svg" style="margin-bottom:0;">
+              <img src="images/undraw/gahag-computer_user.png" class="img-fluid" alt="svg image" style="max-width:100%; border-radius:16px; box-shadow:0 4px 24px #00e6e633; background:#232526; padding:12px; margin-bottom:0;">
             </div>
-                
-                <div class="col-lg-7 col-md-12 col-12 d-flex align-items-center">
-                    <div class="about-text">
-                        <h1 class="animated animated-text">
-                            <span class="mr-2">Hey folks, I'm</span>
-                                <div class="animated-info">
-                                    <span class="animated-item">Shivangi Srivastava</span>
-                                    <span class="animated-item">a Software Engineer</span>
-                                </div>
-                        </h1>
-                        <br>
-                        <p>Each day, I try to be an improved version of myself and strive to be better.</p>
-                        
-                        <div class="custom-btn-group mt-4">
-                          <a href="images/undraw/My Resume.pdf" class="btn mr-lg-2 custom-btn" target="_blank"><i class='uil uil-file-alt'></i> My Resume</a>
-                          <a href="#contact" class="btn custom-btn custom-btn-bg custom-btn-link">Contact me</a>
-                        </div>
-                    </div>
-                </div>
-
+          </div>
+          <div class="col-lg-7 col-md-12 col-12 d-flex align-items-center" style="margin-top: 32px;">
+            <div class="about-text">
+              <h1 class="animated-intro" style="font-family:'Fira Mono', monospace; font-size:3.2rem; color:#00e6e6; font-weight:700; text-shadow:0 0 16px #00e6e6aa; margin-bottom:0.5rem;">
+                <span class="intro-line" style="display:block;">Hey folks, I'm</span>
+                <span class="intro-name" style="display:block; font-size:2.5rem; color:#fff; font-weight:700; margin-top:8px; letter-spacing:1px;">Shivangi Srivastava</span>
+                <span class="intro-role" style="display:block; font-size:1.5rem; color:#00e6e6; font-weight:500; margin-top:8px; font-family:'Fira Mono', monospace;">Software Engineer &amp; Tech Enthusiast</span>
+              </h1>
+              <p style="font-size:1.35rem; color:#e0e0e0; font-family:'Montserrat', Arial, sans-serif; margin-top:2.5rem; margin-bottom:2.5rem;">I like figuring out how to make things work better behind the scenes and learning as I go.</p>
+              <div class="custom-btn-group mt-4 d-flex flex-row gap-4">
+                <a href="images/undraw/My Resume.pdf" class="btn mr-lg-2 custom-btn" target="_blank" style="background:#00e6e6; color:#232526; font-size:1.25rem; min-width:180px; display:inline-flex; align-items:center; justify-content:center;"><i class='uil uil-file-alt' style="margin-right:8px;"></i> My Resume</a>
+                <a href="#contact" class="btn custom-btn custom-btn-bg custom-btn-link" style="background:#00e6e6; color:#232526; font-size:1.25rem; min-width:180px; display:inline-flex; align-items:center; justify-content:center;">Contact me</a>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- PROJECTS -->
@@ -158,83 +369,128 @@
             <div class="row">
 
                 <div class="col-lg-6 col-12">
-                  <h2 class="mb-4">Experiences</h2>
-
-                    <div class="timeline">
-                        <div class="timeline-wrapper">
-                             <div class="timeline-yr">
-                                  <span>Present</span>
-                             </div>
-                             <div class="timeline-info">
-                                  <h3><span>Software Engineer 1</span>&nbsp;&nbsp;&nbsp;<a href="https://in.linkedin.com/company/paypal" target="_blank"><img src="images/undraw/paypal.svg" class="img-fluid" alt="PayPal logo" width="80px"></a></h3>
-                                  <p>Work in the Payments Tools team to build and maintain key performance indicators which monitor all the transactions happening every second and report failures, if any.</p>
-                             </div>
+                  <h2 class="mb-4" style="color:#00e6e6; font-family:'Fira Mono', monospace; font-size:2.1rem; font-weight:700; text-shadow:0 0 10px #00e6e644; letter-spacing:1px;">Professional Experience</h2>
+                  <div class="timeline" style="border-left:3px solid #00e6e6; padding-left:24px;">
+                    <!-- Experience 1: SDE 2 -->
+                    <div class="timeline-wrapper" style="margin-bottom:36px;">
+                      <div class="timeline-yr" style="background:transparent; box-shadow:none; margin-bottom:0;">
+                        <span style="background:#00e6e6; color:#232526; font-family:'Fira Mono', monospace; font-weight:bold; border-radius:8px; padding:0px 12px; box-shadow:0 2px 8px #00e6e633; display:inline-block; position:relative; left:-4px;">Current</span>
+                      </div>
+                      <div class="timeline-info" style="background:rgba(44,62,80,0.92); border-radius:12px; box-shadow:0 2px 12px #00e6e622; padding:18px 24px; margin-top:8px;">
+                        <div class="d-flex align-items-center mb-2" style="flex-wrap:wrap; min-width:0;">
+                          <img src="images/undraw/paypal.svg" alt="PayPal logo" width="56" style="margin-right:12px; background:#fff; border-radius:0; box-shadow:0 2px 8px #00e6e633; min-width:56px; max-width:56px; height:auto; object-fit:contain; flex-shrink:0;">
+                          <div style="min-width:0;">
+                            <span style="font-size:1.25rem; color:#fff; font-weight:600; word-break:break-word;">Software Engineer 2</span><br>
+                          </div>
                         </div>
-
-                        <div class="timeline-wrapper">
-                            <div class="timeline-yr">
-                                <span>2021</span>
-                            </div>
-                            <div class="timeline-info">
-                                <h3><span>SDE Intern</span>&nbsp;&nbsp;&nbsp;<a href="https://in.linkedin.com/company/paypal" target="_blank"><img src="images/undraw/paypal.svg" class="img-fluid" alt="PayPal logo" width="80px"></a></h3>
-                                <p>Got the opportunity to work closely with the Payments team on some of the most important Key Performance Indicator Tools (KPIs) at PayPal.</p>
-                                <p>Worked in technologies like ReactJS, SpringBoot, Elastic Search</p>
-                            </div>
-                        </div>
-
-                        <div class="timeline-wrapper">
-                            <div class="timeline-yr">
-                                <span>2020</span>
-                            </div>
-                            <div class="timeline-info">
-                                <h3><span>SDE Intern</span>&nbsp;&nbsp;&nbsp;<a href="https://in.linkedin.com/company/missioned" target="_blank"><img src="images/undraw/missioned.jpeg" class="img-fluid" alt="MissionEd logo" width="80px" height="1px"></a></h3>
-                                <p>Worked in a team of 3 to build an educational website for the startup from scratch where students can register themselves and take courses and lessons</p>
-                            </div>
-                        </div>
-
+                        <ul style="color:#b0bfc7; font-size:1.05rem; font-family:'Montserrat', Arial, sans-serif; margin-bottom:0; padding-left:18px;">
+                          <li>Developed proprietary shadow testing tool, detecting 90%+ integration issues pre-production.</li>
+                          <li>Refactored legacy Kafka-based Java component, reducing complexity by 30%.</li>
+                          <li>Revamped ReactJS UI, improving load time by 40%.</li>
+                          <li>Migrated 20+ payment exception jobs from Informatica to in-house frameworks, reducing costs by 25%.</li>
+                          <li>Converted KPI tooling from Oracle to BigQuery, achieving 60% lower query latency.</li>
+                        </ul>
+                      </div>
                     </div>
+                    <!-- Experience 2: SDE 1 -->
+                    <div class="timeline-wrapper" style="margin-bottom:36px;">
+                      <div class="timeline-yr" style="background:transparent; box-shadow:none; margin-bottom:0;">
+                        <span style="background:#00e6e6; color:#232526; font-family:'Fira Mono', monospace; font-weight:bold; border-radius:8px; padding:4px 12px; box-shadow:0 2px 8px #00e6e633;">2021-2023</span>
+                      </div>
+                      <div class="timeline-info" style="background:rgba(44,62,80,0.92); border-radius:12px; box-shadow:0 2px 12px #00e6e622; padding:18px 24px; margin-top:8px;">
+                        <div class="d-flex align-items-center mb-2" style="flex-wrap:wrap; min-width:0;">
+                          <img src="images/undraw/paypal.svg" alt="PayPal logo" width="56" style="margin-right:12px; background:#fff; border-radius:0; box-shadow:0 2px 8px #00e6e633; min-width:56px; max-width:56px; height:auto; object-fit:contain; flex-shrink:0;">
+                          <div style="min-width:0;">
+                            <span style="font-size:1.15rem; color:#fff; font-weight:600; word-break:break-word;">Software Engineer 1</span><br>
+                          </div>
+                        </div>
+                        <ul style="color:#b0bfc7; font-size:1.05rem; font-family:'Montserrat', Arial, sans-serif; margin-bottom:0; padding-left:18px;">
+                          <li>Developed RESTful APIs using Java Spring Boot for real-time transaction monitoring.</li>
+                          <li>Built scalable backend services handling millions of daily API transactions.</li>
+                          <li>Achieved 80%+ code coverage using Mockito, reducing post-deployment bugs.</li>
+                          <li>Contributed to KPI design and platform metrics for faster root cause analysis.</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <!-- Experience 2 -->
+                    <div class="timeline-wrapper" style="margin-bottom:36px;">
+                      <div class="timeline-yr" style="background:transparent; box-shadow:none; margin-bottom:0;">
+                        <span style="background:#00e6e6; color:#232526; font-family:'Fira Mono', monospace; font-weight:bold; border-radius:8px; padding:4px 12px; box-shadow:0 2px 8px #00e6e633;">2021</span>
+                      </div>
+                      <div class="timeline-info" style="background:rgba(44,62,80,0.92); border-radius:12px; box-shadow:0 2px 12px #00e6e622; padding:18px 24px; margin-top:8px;">
+                        <div class="d-flex align-items-center mb-2" style="flex-wrap:wrap; min-width:0;">
+                          <img src="images/undraw/paypal.svg" alt="PayPal logo" width="56" style="margin-right:12px; background:#fff; border-radius:0; box-shadow:0 2px 8px #00e6e633; min-width:56px; max-width:56px; height:auto; object-fit:contain; flex-shrink:0;">
+                          <div style="min-width:0;">
+                            <span style="font-size:1.15rem; color:#fff; font-weight:600; word-break:break-word;">SDE Intern</span><br>
+                          </div>
+                        </div>
+                        <ul style="color:#b0bfc7; font-size:1.05rem; font-family:'Montserrat', Arial, sans-serif; margin-bottom:0; padding-left:18px;">
+                          <li>Worked on Key Performance Indicator Tools (KPIs) for transaction analytics.</li>
+                          <li>Technologies: ReactJS, Spring Boot, ElasticSearch.</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
                 </div>
 
                 <div class="col-lg-6 col-12">
-                  <h2 class="mb-4 mobile-mt-2">Education</h2>
-
-                    <div class="timeline">
-                        <div class="timeline-wrapper">
-                             <div class="timeline-yr">
-                                  <span>2017-21</span>
-                             </div>
-                             <div class="timeline-info">
-                                  <h3><span>B Tech</span><small>Maharaja Surajmal Institute of Technology, GGSIPU</small></h3>
-                                  <p>Pursued Bachelors degree in Computer Science and Engineering with an overall CGPA of 9.43/10</p>
-                                  <br>
-                             </div>
+                  <h2 class="mb-4 mobile-mt-2" style="color:#00e6e6; font-family:'Fira Mono', monospace; font-size:2.1rem; font-weight:700; text-shadow:0 0 10px #00e6e644; letter-spacing:1px;">Education</h2>
+                  <div class="timeline" style="border-left:3px solid #00e6e6; padding-left:24px;">
+                    <!-- Education 1 -->
+                    <div class="timeline-wrapper" style="margin-bottom:36px;">
+                      <div class="timeline-yr" style="background:transparent; box-shadow:none; margin-bottom:0;">
+                        <span style="background:#00e6e6; color:#232526; font-family:'Fira Mono', monospace; font-weight:bold; border-radius:8px; padding:4px 12px; box-shadow:0 2px 8px #00e6e633;">2017-2021</span>
+                      </div>
+                      <div class="timeline-info" style="background:rgba(44,62,80,0.92); border-radius:12px; box-shadow:0 2px 12px #00e6e622; padding:18px 24px; margin-top:8px;">
+                        <div class="d-flex align-items-center mb-2">
+                          <div>
+                            <span style="font-size:1.15rem; color:#fff; font-weight:600;">B.Tech, Computer Science & Engineering</span><br>
+                            <span style="font-size:1rem; color:#00e6e6; font-family:'Fira Mono', monospace;">Maharaja Surajmal Institute of Technology, GGSIPU</span>
+                          </div>
                         </div>
-
-                        <div class="timeline-wrapper">
-                            <div class="timeline-yr">
-                                <span>2016</span>
-                            </div>
-                            <div class="timeline-info">
-                                <h3><span>CBSE 12th</span><small>Vanasthali Public School</small></h3>
-                                <p>Secured 94% in CBSE 12th boards with subjects Physics, Chemistry, Maths and Comp Sc.</p>
-                                <br>
-                                <br>
-                                <br>
-                                <br>
-                            </div>
-                        </div>
-                        
-                        <div class="timeline-wrapper">
-                            <div class="timeline-yr">
-                                <span>2014</span>
-                            </div>
-                            <div class="timeline-info">
-                                <h3><span>CBSE 10th</span><small>Vanasthali Public School</small></h3>
-                                <p>Secured CGPA 10.0/10 in CBSE 10th boards and received a 50% scholarship</p>
-                            </div>
-                        </div>
-
+                        <ul style="color:#b0bfc7; font-size:1.05rem; font-family:'Montserrat', Arial, sans-serif; margin-bottom:0; padding-left:18px;">
+                          <li>CGPA: 9.43/10</li>
+                          <li>Graduated with distinction in Computer Science and Engineering.</li>
+                        </ul>
+                      </div>
                     </div>
+                    <!-- Education 2 -->
+                    <div class="timeline-wrapper" style="margin-bottom:36px;">
+                      <div class="timeline-yr" style="background:transparent; box-shadow:none; margin-bottom:0;">
+                        <span style="background:#00e6e6; color:#232526; font-family:'Fira Mono', monospace; font-weight:bold; border-radius:8px; padding:4px 12px; box-shadow:0 2px 8px #00e6e633;">2016</span>
+                      </div>
+                      <div class="timeline-info" style="background:rgba(44,62,80,0.92); border-radius:12px; box-shadow:0 2px 12px #00e6e622; padding:18px 24px; margin-top:8px;">
+                        <div class="d-flex align-items-center mb-2">
+                          <div>
+                            <span style="font-size:1.1rem; color:#fff; font-weight:600;">CBSE 12th</span><br>
+                            <span style="font-size:1rem; color:#00e6e6; font-family:'Fira Mono', monospace;">Vanasthali Public School</span>
+                          </div>
+                        </div>
+                        <ul style="color:#b0bfc7; font-size:1.05rem; font-family:'Montserrat', Arial, sans-serif; margin-bottom:0; padding-left:18px;">
+                          <li>Percentage: 94%</li>
+                          <li>Subjects: Physics, Chemistry, Mathematics, Computer Science</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <!-- Education 3 -->
+                    <div class="timeline-wrapper">
+                      <div class="timeline-yr" style="background:transparent; box-shadow:none; margin-bottom:0;">
+                        <span style="background:#00e6e6; color:#232526; font-family:'Fira Mono', monospace; font-weight:bold; border-radius:8px; padding:4px 12px; box-shadow:0 2px 8px #00e6e633;">2014</span>
+                      </div>
+                      <div class="timeline-info" style="background:rgba(44,62,80,0.92); border-radius:12px; box-shadow:0 2px 12px #00e6e622; padding:18px 24px; margin-top:8px;">
+                        <div class="d-flex align-items-center mb-2">
+                          <div>
+                            <span style="font-size:1.1rem; color:#fff; font-weight:600;">CBSE 10th</span><br>
+                            <span style="font-size:1rem; color:#00e6e6; font-family:'Fira Mono', monospace;">Vanasthali Public School</span>
+                          </div>
+                        </div>
+                        <ul style="color:#b0bfc7; font-size:1.05rem; font-family:'Montserrat', Arial, sans-serif; margin-bottom:0; padding-left:18px;">
+                          <li>CGPA: 10.0/10</li>
+                          <li>Received 50% scholarship for academic excellence.</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
                 </div>
                 
             </div>
@@ -244,32 +500,30 @@
     <!-- SKILLS  -->
     <section class="skills" id="skills">
       <div class="container">
-        <h2 class="mb-4">&nbsp;&nbsp;Skills</h2>
+        <h2 class="mb-4 text-center" style="text-align:center;">Skills</h2>
         <div class="row">
-            <div class="col-sm-4">
-                <ul id="skills">
-                  <li><img src="images/undraw/c.svg" class="img-fluid" alt="Cpp" width="80px"></li><br>
-                  <li><img src="images/undraw/java-4.svg" class="img-fluid" alt="Java" width="80px"></li><br>
-                  <li><img src="images/undraw/python-4.svg" class="img-fluid" alt="Python" width="80px"></li><br><br>
-              </ul>
-            </div>
-
-            <div class="col-sm-4">
-              <ul id="skills">
-                <li><img src="images/undraw/icons8-html-file-64.png" class="img-fluid" alt="HTML" width="80px"></li><br><br>
-                <li><img src="images/undraw/css-2.jpeg" class="img-fluid" alt="CSS" width="80px"></li><br><br>
-                <li><img src="images/undraw/logo-javascript.svg" class="img-fluid" alt="Javascript" width="80px"></li>
+          <div class="col-sm-4">
+            <ul>
+              <li><img src="images/undraw/c.svg" class="img-fluid" alt="Cpp"></li>
+              <li><img src="images/undraw/java-4.svg" class="img-fluid" alt="Java"></li>
+              <li><img src="images/undraw/python-4.svg" class="img-fluid" alt="Python"></li>
             </ul>
           </div>
-
-            <div class="col-sm-4">
-                <ul id="skills">
-                  <li><img src="images/undraw/spring-boot.png" class="img-fluid" alt="Spring" width="140px"></li><br><br><br><br><br>
-                  <li><img src="images/undraw/react-3.png" class="img-fluid" alt="React" width="140px"></li><br><br><br><br>
-                  <li><img src="images/undraw/icons8-sql-60.png" class="img-fluid" alt="SQL" width="100px"></li>
-              </ul>
-            </div>
-      </div>
+          <div class="col-sm-4">
+            <ul>
+              <li><img src="images/undraw/icons8-html-file-64.png" class="img-fluid" alt="HTML"></li>
+              <li><img src="images/undraw/css-2.jpeg" class="img-fluid" alt="CSS"></li>
+              <li><img src="images/undraw/logo-javascript.svg" class="img-fluid" alt="Javascript"></li>
+            </ul>
+          </div>
+          <div class="col-sm-4">
+            <ul>
+              <li><img src="images/undraw/spring-boot.png" class="img-fluid" alt="Spring"></li>
+              <li><img src="images/undraw/react-3.png" class="img-fluid" alt="React"></li>
+              <li><img src="images/undraw/bigquery.png" class="img-fluid" alt="SQL"></li>
+            </ul>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -279,42 +533,42 @@
         <div class="row">
 
           <div class="col-lg-6 col-12">
-            <h2 class="mb-4">Wanna connect? Drop me a mail.</h2>
+            <h2 class="mb-4" style="color:#00e6e6; font-family:'Fira Mono', monospace; font-size:2.1rem; font-weight:700; text-shadow:0 0 10px #00e6e644;">Let's Connect</h2>
+            <p style="color:#b0bfc7; font-size:1.1rem; font-family:'Montserrat', Arial, sans-serif; margin-bottom:28px;">Feel free to reach out for collaboration, opportunities, or just to say hello. I'll get back to you as soon as possible.</p>
             <div class="contact-form">
-
               <form action="mailto:shivangidhn1998@gmail.com" method="post" enctype="text/plain">
-                <div class="row">
-                  <div class="col-lg-6 col-12">
-                    <input type="text" class="form-control" name="Name" placeholder="Your Name" id="name">
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <input type="text" class="form-control" name="Name" placeholder="Your Name" id="name" required>
                   </div>
-
-                  <div class="col-lg-6 col-12">
-                    <input type="email" class="form-control" name="Email" placeholder="Your Email" id="email">
+                  <div class="form-group col-md-6">
+                    <input type="email" class="form-control" name="Email" placeholder="Your Email" id="email" required>
                   </div>
-
-                  <div class="col-12">
-                    <textarea name="Message" rows="6" class="form-control" id="message" placeholder="Message"></textarea>
-                  </div>
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                  <div class="col-lg-6 col-12">
-                    <input type="submit" class="form-control submit-btn" value="Send Email">
-                  </div>
+                </div>
+                <div class="form-group">
+                  <textarea name="Message" rows="6" class="form-control" id="message" placeholder="Your Message" required></textarea>
+                </div>
+                <div class="form-group d-flex justify-content-center">
+                  <input type="submit" class="btn custom-btn submit-btn px-5" value="Send Message" style="font-size:1.1rem;">
                 </div>
               </form>
             </div>
           </div>
 
           <div class="col-lg-6 col-12">
-            <br><br><br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <img src="images/undraw/mail-ios.svg" width="300px">
+            <div class="d-flex flex-column align-items-center justify-content-center h-100" style="min-height: 400px;">
+              <div class="footer-social d-flex flex-row gap-3 mt-3 justify-content-center w-100">
+                <a href="https://in.linkedin.com/in/shivangi0408" target="_blank" aria-label="LinkedIn" style="display:inline-block;">
+                  <img src="images/undraw/linkedin.png" alt="Linkedin" style="width:100px; height:100px; border-radius:16px; background:#232526; box-shadow:0 2px 12px #00e6e633; transition:transform 0.2s; margin-right:24px;">
+                </a>
+                <a href="https://github.com/shivangisrivastava0408" target="_blank" aria-label="GitHub" style="display:inline-block;">
+                  <img src="images/undraw/github.png" alt="Github" style="width:100px; height:100px; border-radius:16px; background:#232526; box-shadow:0 2px 12px #00e6e633; transition:transform 0.2s;">
+                </a>
+              </div>
+            </div>
           </div>
 
-          <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <a href="https://in.linkedin.com/in/shivangi0408" target="_blank"><img src="images/undraw/linkedin.png" class="img-fluid" alt="Linkedin" width="80px" display="block"></a>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <a href="https://github.com/shivangisrivastava0408" target="_blank"><img src="images/undraw/github.png" class="img-fluid" alt="Github" width="80px" ></a>
+          </div>
           </div>
 
         </div>
